@@ -1,3 +1,8 @@
+
+const val RESET = "\u001B[0m"
+const val RED = "\u001B[31m"
+const val GREEN = "\u001B[32m"
+
 fun main() {
     do {
         showTitleScreen()
@@ -15,6 +20,10 @@ fun showTitleScreen() {
     println("#######################################\n")
     println("Instructions:")
     println("Use W/A/S/D to move your player (P) through the maze.")
+    println("W - move up")
+    println("A - move left")
+    println("S - move down")
+    println("D - move right")
     println("Reach the exit (E) to win. Walls (#) block your path.")
     println("Press Q anytime to quit the current game.\n")
     println("Press ENTER to start...")
@@ -65,7 +74,6 @@ fun playMazeGame() {
         when (nextTile) {
             '#' -> println("You hit a wall!")
             'E' -> {
-                printMaze(maze)
                 println("\nYou escaped the maze! Congratulations!")
                 break
             }
@@ -91,5 +99,14 @@ fun askReplay(): Boolean {
 }
 
 fun printMaze(maze: Array<CharArray>) {
-    for (row in maze) println(row.concatToString())
+    for (row in maze) {
+        for (cell in row) {
+            when (cell) {
+                'P' -> print("$GREEN$cell$RESET") // Player = Green
+                'E' -> print("$RED$cell$RESET")   // Exit = Red
+                else -> print(cell)
+            }
+        }
+        println()
+    }
 }
