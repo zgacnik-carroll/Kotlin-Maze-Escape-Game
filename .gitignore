@@ -35,3 +35,4 @@ bin/
 
 META-INF/
 *.class
+*.iml
