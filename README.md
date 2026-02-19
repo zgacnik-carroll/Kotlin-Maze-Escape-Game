@@ -59,4 +59,4 @@ Navigate the player (`P`) through the maze and reach the exit (`E`).
 
 ## Closing Remarks
 
-This project was created to strengthen my understanding of Kotlin programming concepts through the development of an interactive console application. It provides a solid foundation for expanding into more advanced game logic and future Kotlin projects.
+This project was created to strengthen my understanding of Kotlin programming concepts through the development of an interactive console application. It provides a solid foundation for expanding into more advanced game logic and future Kotlin projects like a GUI or a Web Application.
