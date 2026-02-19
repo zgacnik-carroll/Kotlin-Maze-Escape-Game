@@ -6,8 +6,6 @@
 Maze Escape is a simple console-based maze navigation game written in Kotlin.  
 The player moves through a maze using keyboard input and attempts to reach the exit while avoiding walls.
 
-The game demonstrates basic programming concepts including:
-
 ---
 
 ## How to Play
